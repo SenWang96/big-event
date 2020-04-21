@@ -71,6 +71,8 @@ $(function () {
             success: function (res) {
                 layer.msg(res.message);
                 if (res.status === 0) {
+                    // 登录成功，先保存token（令牌）
+                    localStorage.setItem('token', res.token);
                     // 登录成功，跳转到index.html
                     location.href = '/index.html';
                 }
