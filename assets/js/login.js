@@ -59,4 +59,23 @@ $(function () {
         }
     });
 
+    // --------------------------  完成登录功能 ---------------------------
+    $('.login form').on('submit', function (e) {
+        e.preventDefault();
+        // 获取账号和密码
+        // 提交给接口，完成登录。登录成功，跳转到 index.html （index.html是项目的首页面）
+        $.ajax({
+            type: 'POST',
+            url: 'http://www.liulongbin.top:3007/api/login',
+            data: $(this).serialize(), // 检查表单各项的name属性值
+            success: function (res) {
+                layer.msg(res.message);
+                if (res.status === 0) {
+                    // 登录成功，跳转到index.html
+                    location.href = '/index.html';
+                }
+            }
+        });
+    })
+
 });
