@@ -11,6 +11,7 @@ $(function () {
         $('.register').hide().prev().show();
     });
 
+    let layer = layui.layer; // 加载弹出层模块
     // --------------------- 完成注册功能 ---------------------
     $('.register form').on('submit', function (e) {
         e.preventDefault();
@@ -22,7 +23,8 @@ $(function () {
             url: 'http://www.liulongbin.top:3007/api/reguser',
             data: data,
             success: function (res) {
-                alert(res.message);
+                // alert(res.message);
+                layer.msg(res.message);
                 if (res.status === 0) {
                     // 注册成功，让登陆的盒子显示
                     $('.register').hide().prev().show();
