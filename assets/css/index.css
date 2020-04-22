@@ -48,6 +48,7 @@
 iframe {
     width: 100%;
     height: 100%;
+    background-color: #f2f3f5;
 }
 
 /*去掉iframe的滚动条  --   给父级的div加 overflow:hidden */
