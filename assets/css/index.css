@@ -30,3 +30,16 @@
     margin-left: 15px;
     margin-right: 5px;
 }
+
+/*侧边栏头像和欢迎语*/
+.userinfo {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.welcome {
+    color: #fff;
+    font-size: 12px;
+    user-select: none;
+}
