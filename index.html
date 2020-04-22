@@ -47,7 +47,7 @@
                     <span class="welcome">欢迎&nbsp;&nbsp;老汤</span>
                 </div>
                 <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
-                    <li class="layui-nav-item layui-this"><a href=""><span class="iconfont icon-home"></span>首页</a></li>
+                    <li class="layui-nav-item layui-this"><a href="/home/dashboard.html" target="fm"><span class="iconfont icon-home"></span>首页</a></li>
                     <li class="layui-nav-item">
                         <a class="" href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
                         <dl class="layui-nav-child">
@@ -60,8 +60,8 @@
                         <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
                         <dl class="layui-nav-child">
                             <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 更换头像</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 重置密码</a></dd>
+                            <dd><a href="/user/changeavatar.html" target="fm"><i class="layui-icon layui-icon-app"></i> 更换头像</a></dd>
+                            <dd><a href="/user/changepwd.html" target="fm"><i class="layui-icon layui-icon-app"></i> 重置密码</a></dd>
                         </dl>
                     </li>
                     
@@ -72,7 +72,8 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <div style="padding: 15px;">内容主体区域</div>
+            <!-- <div style="padding: 15px;">内容主体区域</div> -->
+            <iframe src="/home/dashboard.html" name="fm"></iframe>
         </div>
 
         <div class="layui-footer">
