@@ -1,0 +1,19 @@
+/*字体头像*/
+.text-avatar {
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #419488;
+    line-height: 33px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+}
+
+/*默认先让字体头像隐藏*/
+.text-avatar {
+    display: none;
+}
