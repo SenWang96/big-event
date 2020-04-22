@@ -25,12 +25,14 @@
         <!-- 卡片面板的内容区 -->
         <div class="layui-card-body">
             <!-- 表单区 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" action="" lay-filter="user">
+                <!-- 隐藏域 -->
+                <input type="hidden" name="id">
                 <!-- 第一行：登录名称 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">登录名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name="title" required lay-verify="required"
+                        <input readonly type="text" name="username" required lay-verify="required"
                             autocomplete="off" class="layui-input">
                     </div>
                 </div>
@@ -39,7 +41,7 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户昵称</label>
                     <div class="layui-input-block">
-                        <input type="text" name="title" required lay-verify="required" placeholder="请输入昵称"
+                        <input type="text" name="nickname" required lay-verify="required" placeholder="请输入昵称"
                             autocomplete="off" class="layui-input">
                     </div>
                 </div>
@@ -48,7 +50,7 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户邮箱</label>
                     <div class="layui-input-block">
-                        <input type="text" name="title" required lay-verify="required" placeholder="请输入邮箱"
+                        <input type="text" name="email" required lay-verify="required" placeholder="请输入邮箱"
                             autocomplete="off" class="layui-input">
                     </div>
                 </div>
