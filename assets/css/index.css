@@ -17,3 +17,16 @@
 .text-avatar {
     display: none;
 }
+
+/*跳转顶级菜单的图标位置*/
+.iconfont {
+    margin-right: 8px;
+    position: relative;
+    top: 1px;
+}
+
+/*调整子菜单的图标*/
+.layui-icon {
+    margin-left: 15px;
+    margin-right: 5px;
+}
