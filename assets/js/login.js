@@ -52,7 +52,7 @@ $(function () {
         // 验证两次密码
         repwd: function (value) {
             // value 表示确认密码
-            let pwd = $('input[name="password"]').val().trim(); // 获取密码
+            let pwd = $('.reg-password').val().trim(); // 获取密码
             if (value !== pwd) {
                 return '两次密码不一致';
             }
