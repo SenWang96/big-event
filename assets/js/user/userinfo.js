@@ -5,7 +5,7 @@ $(function () {
     renderForm();
     function renderForm() {
         $.ajax({
-            url: 'http://www.liulongbin.top:3007/my/userinfo',
+            url: '/my/userinfo',
             success: function (res) {
                 // console.log(res);
                 // 设置表单的四项值（id/username/nickname/email）
@@ -16,9 +16,6 @@ $(function () {
                 // 快速为表单赋值
                 form.val('user', res.data);
                 // 为表单赋值，对象是有要求的，对象的key要和表单各项的name属性值相同
-            },
-            headers: {
-                Authorization: localStorage.getItem('token')
             }
         });
     }
@@ -37,11 +34,8 @@ $(function () {
         // 4. ajax提交数据给接口
         $.ajax({
             type: 'POST',
-            url: 'http://www.liulongbin.top:3007/my/userinfo',
+            url: '/my/userinfo',
             data: data,
-            headers: {
-                Authorization: localStorage.getItem('token')
-            },
             success: function (res) {
                 // console.log(res);
                 if (res.status === 0) {
@@ -52,5 +46,12 @@ $(function () {
                 }
             }
         });
+    });
+
+    // ------------------   重置表单 --------------------
+    // 重置的时候，并不是清空输入框的值，而是恢复默认的样子
+    $('button[type="reset"]').on('click', function (e) {
+        e.preventDefault();
+        renderForm();
     });
 });

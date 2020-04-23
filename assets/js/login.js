@@ -20,7 +20,7 @@ $(function () {
         // 发送ajax请求到接口，完成注册
         $.ajax({
             type: 'POST',
-            url: 'http://www.liulongbin.top:3007/api/reguser',
+            url: '/api/reguser',
             data: data,
             success: function (res) {
                 // alert(res.message);
@@ -66,7 +66,7 @@ $(function () {
         // 提交给接口，完成登录。登录成功，跳转到 index.html （index.html是项目的首页面）
         $.ajax({
             type: 'POST',
-            url: 'http://www.liulongbin.top:3007/api/login',
+            url: '/api/login',
             data: $(this).serialize(), // 检查表单各项的name属性值
             success: function (res) {
                 layer.msg(res.message);

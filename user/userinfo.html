@@ -13,6 +13,8 @@
     <script src="/assets/lib/jquery.js"></script>
     <!-- 加载layui.all.js -->
     <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 加载common.js -->
+    <script src="/assets/js/common.js"></script>
     <!-- 加载自己的js -->
     <script src="/assets/js/user/userinfo.js"></script>
 </head>
@@ -50,7 +52,7 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户邮箱</label>
                     <div class="layui-input-block">
-                        <input type="text" name="email" required lay-verify="required" placeholder="请输入邮箱"
+                        <input type="text" name="email" required lay-verify="required|email" placeholder="请输入邮箱"
                             autocomplete="off" class="layui-input">
                     </div>
                 </div>

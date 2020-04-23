@@ -1,5 +1,7 @@
+
 // 页面dom元素全部加载完毕之后，才会执行
 $(function () {
+
     // 加载layer模块
     let layer = layui.layer;
 
@@ -22,9 +24,9 @@ $(function () {
 })
 
 // 定义获取用户信息的函数，定义一个全局函数
-function getUserInfo () {
+function getUserInfo() {
     $.ajax({
-        url: 'http://www.liulongbin.top:3007/my/userinfo',
+        url: '/my/userinfo',
         success: function (res) {
             // console.log(res);
             if (res.status === 0) {
@@ -46,9 +48,6 @@ function getUserInfo () {
                     $('.layui-nav-img').hide();
                 }
             }
-        },
-        headers: {
-            Authorization: localStorage.getItem('token')
         }
     });
 }
